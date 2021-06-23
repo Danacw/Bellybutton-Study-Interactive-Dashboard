@@ -88,36 +88,13 @@ init();
 
 
 
-//////STEP 4: Plot bar chart //////
+
+
+//////Plot bubble chart //////
 
 
 
-//////STEP 5: Plot bubble chart //////
-
-
-
-//////STEP : Plot Demogrpahic info table //////
-
-
-
-
-// var names = data.names.map(d => )
-
-// //Use sample_values as the values for the bar chart.
-// var sample_values = Object.values(data.samples.sample_values[0]);
-
-// //Use otu_ids as the labels for the bar chart
-// var labels = Object.keys(data.samples.otu_ids[0]);
-
-// console.log(labels);
-
-
-
-
-
-
-
-
+//////Plot Demogrpahics info table //////
 
 // var id = data.metadata.id;
 // var ethnicity = data.metadata.ethnicity;
