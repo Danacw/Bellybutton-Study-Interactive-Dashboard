@@ -11,30 +11,48 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+  <div class="container-fluid">
+    <!-- <div class="row"> -->
+      <!-- <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-    </div>
+        <h2>Use the interactive charts below to explore belly buttons!</p>
+      </div> -->
+    <!-- </div> -->
     <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="updatePlotly(this.value)"></select>
+      <div class="col-md-9">
+        <div class="col-md-11 text-center" style=" margin-left: 40px; color:white; background-color:#337ab7; margin-top: 20px; padding-bottom: 10px; border-radius: 10px;">
+          <h2>Belly Button Biodiversity Dashboard</h1>
+          <h3>Select a Test Subject ID to explore belly button data!</p>
         </div>
-        <div class="panel panel-primary">
+        <div class="col-md-12">
+          <div class="well well-lg" style="margin-top:40px; margin-left:20px; margin-right:20px";>
+            <h4.5>
+              I bet you never would have guessed that scientifically, your belly button is defined as a habitat! And yet, it is remains relatively unexplored… (Except of course, by Ms. Frizzle in season 1 episode 3 of The Magic School Bus, where she takes her class on a trip inside the human body.)  However - the <a href="http://robdunnlab.com/projects/belly-button-biodiversity/"> Belly Button Biodiversity Study</href></a> is taking it a step further! (Sorry Ms. Frizzle… )<br><br>
+              In 2011, the project was launched by The Public Science Lab at North Carolina State University to investigate the microbes inhabiting our navels. The study revealed that a small handful of microbial species (also called Operational Taxonomic Units, or OTUs) were present in more than 70% of the test subjects.<br><br>
+              To view data on each of the subject’s results, I put together a few dynamic visualizations using Plotly’s Javascript graphing library. Go ahead and choose a Test Subject ID to start exploring the data. It might not be as exciting as Ms. Frizzle’s magic school bus, but hey, data is data! And it must be explored none-the-less!    
+            </h4.5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="well" style=margin-top:30px;>
+          <h5>Test Subject ID:</h5>
+          <select id="selDataset"></select>
+        </div>
+        <div class="panel panel-primary" style=margin-top:40px;>
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-5">
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
         <div id="bar"></div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div id="gauge"></div>
       </div>
     </div>
@@ -44,12 +62,11 @@
       </div>
     </div>
   </div>
-
+</div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./static/js/app.js"></script>
   <script src="./static/js/bonus.js"></script>
-  
-</body>
+  <script src="./static/js/app.js"></script>
 
+</body>
 </html>
