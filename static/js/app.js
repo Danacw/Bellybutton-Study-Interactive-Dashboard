@@ -1,5 +1,6 @@
 ////// STEP 1: Use D3 library to read in samples.json and add data.names to the dropdown menu. //////
 var data = d3.json("data/samples.json").then((data) => {
+     console.log(data)
      
      var sampleNames = data.names;
      // console.log(sampleNames);
@@ -11,10 +12,10 @@ var data = d3.json("data/samples.json").then((data) => {
  ////// STEP 2: Initiallize page with default plots. //////
 
      function init() {
-          console.log(data);
+          //console.log(data);
           //set ID No.940 as default plot
           defaultDataset = data.samples[0];
-          console.log(defaultDataset)
+          //console.log(defaultDataset)
 
           //select ALL sample_values, otu_ids, and otu_labels
           allSampleValuesDefault = defaultDataset.sample_values;
@@ -81,7 +82,7 @@ var data = d3.json("data/samples.json").then((data) => {
 
           //Grab default metadata array 
           var defaultDemo = data.metadata[0];
-          console.log(defaultDemo);
+//         console.log(defaultDemo);
           //console.log(data.metadata);
 
           //Display key-value pairs from metadata JSON object
@@ -93,7 +94,7 @@ var data = d3.json("data/samples.json").then((data) => {
 
           //Grab washing frequency attribute from metadata JSON object
           var defaultWfreq = defaultDemo.wfreq
-          console.log(defaultWfreq);
+//          console.log(defaultWfreq);
           
           //Build guage chart
           var trace3 = [
@@ -143,7 +144,7 @@ var data = d3.json("data/samples.json").then((data) => {
                 var dropdownMenu = d3.select("#selDataset").node();
                 // Assign the value of the dropdown menu option to a variable
                 var inputValue = dropdownMenu.value;
-                //console.log(inputValue);
+                console.log(inputValue);
 
                 //filter dataset based on inputValue entered
                 dataset = data.samples.filter(sample => sample.id === inputValue) [0];
@@ -167,8 +168,8 @@ var data = d3.json("data/samples.json").then((data) => {
                 Plotly.restyle["bar", "text", [top10Labels]];
 
                 // RESTYLE BUBBLE CHART //
-                Plotly.restyle("bubble", "x", [allSampleValues]);
-                Plotly.restyle("bubble", "y", [allOtuIds]);
+                Plotly.restyle("bubble", "x", [allOtuIds]);
+                Plotly.restyle("bubble", "y", [allSampleValues]);
                 Plotly.restyle("bubble", "text", [allOtuLabels]);
 
                 // RESTYLE DEMOGRAPHICS TABLE //    

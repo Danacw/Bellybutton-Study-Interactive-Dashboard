@@ -7,29 +7,54 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Add bootstrap and stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="static/css/style.css"> 
 </head>
+
+<!--Navbar adjustments-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <div class="container">
+  <div><a class="navbar-brand text-white" style = "color:white; font-size:25px !important; font-weight: 550 !important;" href="https://danacw.github.io/">Dana C. Walker</a>
+  </div>
+
+  <div>
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a class="nav-item" href="https://github.com/Danacw" style = "color:white">Github</a></li>
+        <li><a class="nav-item" href="#" style = "color:white" >Resume</a></li>
+        <li><a class="nav-item" href="#" style = "color:white" >Contact Me</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown" style = "color:white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://danacw.github.io/Movie-Database-API/HTML_Pages/index.html">The Movie Database API Analysis</a></li>
+            <li><a href="https://danacw.github.io/Web-Design-Challenge/HTML_Pages/index.html">OpenWeatherMap API Analysis</a></li>
+            <li><a href="https://danacw.github.io/Javascript-Challenge/">UFO Sightings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
 
 <body>
   <div class="container-fluid">
-    <!-- <div class="row"> -->
-      <!-- <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <h2>Use the interactive charts below to explore belly buttons!</p>
-      </div> -->
-    <!-- </div> -->
     <div class="row">
       <div class="col-md-9">
-        <div class="col-md-11 text-center" style=" margin-left: 40px; color:white; background-color:#337ab7; margin-top: 20px; padding-bottom: 10px; border-radius: 10px;">
+        <div class="col-md-10 text-center" style=" margin-left: 123px; color:white; background-color:#337ab7; margin-top: 20px; padding-bottom: 10px; border-radius: 10px;">
           <h2>Belly Button Biodiversity Dashboard</h1>
           <h3>Select a Test Subject ID to explore belly button data!</p>
         </div>
         <div class="col-md-12">
-          <div class="well well-lg" style="margin-top:40px; margin-left:20px; margin-right:20px";>
+          <div class="well well-lg" style="margin-top:40px; margin-left:80px;";>
             <h4.5>
-              I bet you never would have guessed that scientifically, your belly button is defined as a habitat! And yet, it is remains relatively unexplored… (Except of course, by Ms. Frizzle in season 1 episode 3 of The Magic School Bus, where she takes her class on a trip inside the human body.)  However - the <a href="http://robdunnlab.com/projects/belly-button-biodiversity/"> Belly Button Biodiversity Study</href></a> is taking it a step further! (Sorry Ms. Frizzle… )<br><br>
-              In 2011, the project was launched by The Public Science Lab at North Carolina State University to investigate the microbes inhabiting our navels. The study revealed that a small handful of microbial species (also called Operational Taxonomic Units, or OTUs) were present in more than 70% of the test subjects.<br><br>
-              To view data on each of the subject’s results, I put together a few dynamic visualizations using Plotly’s Javascript graphing library. Go ahead and choose a Test Subject ID to start exploring the data. It might not be as exciting as Ms. Frizzle’s magic school bus, but hey, data is data! And it must be explored none-the-less!    
+              I bet you would never guess that scientifically, your belly button is defined as a habitat! And yet, it is remains relatively unexplored… (Except of course, by Ms. Frizzle in season 1 episode 3 of The Magic School Bus, where she takes her class on a trip inside the human body.)  However - the <a href="http://robdunnlab.com/projects/belly-button-biodiversity/"> Belly Button Biodiversity Study</href></a> is taking it a step further! (Sorry Ms. Frizzle… )<br><br>
+              In 2011, the study was launched by The Public Science Lab at North Carolina State University to investigate the microbes inhabiting our navels. The study revealed that a small handful of microbial species (also called Operational Taxonomic Units, or OTUs) were present in more than 70% of the test subjects.<br><br>
+              To view data on each of the subject’s results, I put together a few dynamic visualizations using Plotly’s JavaScript graphing library. Go ahead and choose a Test Subject ID to start exploring the data. It may not be as exciting as Ms. Frizzle’s magic school bus, but hey, data is data! And it must be explored none-the-less!    
             </h4.5>
           </div>
         </div>
@@ -65,7 +90,6 @@
 </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./static/js/bonus.js"></script>
   <script src="./static/js/app.js"></script>
 
 </body>
