@@ -1,4 +1,3 @@
-![Screen Shot 2021-07-13 at 5 09 05 PM](https://user-images.githubusercontent.com/26308909/125540693-f8a82dc2-2abe-4241-b977-951895c51f1c.png)
 # Plotly-Challenge
 
 You can view the interactive dashboard for this challenge here: https://danacw.github.io/Plotly-Challenge/index.html
