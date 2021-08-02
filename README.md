@@ -1,6 +1,6 @@
 # Plotly-Challenge
 
-You can view the interactive dashboard for this challenge here: https://danacw.github.io/Plotly-Challenge/index.html
+You can view the interactive dashboard for this challenge here: https://danacw.github.io/Bellybutton-Study-Interactive-Dashboard/
 
 For this challenge, I used Plotly's JavaScript graphing library and the D3 JavaScript library to create a dynamic, interactive dashboard on data from North Carolina State's <a href=http://robdunnlab.com/projects/belly-button-biodiversity/> Belly Button Biodiversity Study </href> </a>. The user has the ability to select specific test subject's ID to view data on each participant.
 
